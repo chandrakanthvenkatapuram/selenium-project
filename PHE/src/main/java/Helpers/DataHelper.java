@@ -25,7 +25,7 @@ public class DataHelper {
 
 	public void LoadData() throws Exception {
 
-		File src = new File("C:\\Users\\ukadiyala\\Documents\\HAT_TestResults\\HOW_Data.xlsx");
+		File src = new File("C:\\Users\\Vmalik\\Documents\\HAT_TestResults\\HOW_Data.xlsx");
 		FileInputStream fis = new FileInputStream(src);
 		WBook = new XSSFWorkbook(fis);
 		WSheet = WBook.getSheet("TestData");

@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 
 public class HealthPriorties {
 
-	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-fit-into-jeans'}"))
+	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-fit-into-jeans']"))
 	public static WebElement fittingJeans;
 	
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-having-more-energy']"))

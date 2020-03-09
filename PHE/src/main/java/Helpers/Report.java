@@ -12,7 +12,7 @@ public class Report {
 	public static ExtentTest logger;
 	
 	public void reportInitiate() {
-		reporthtml = new ExtentHtmlReporter("C:\\ETesting\\PHE\\PHE_HowAreYou\\Reports\\Extent.html");
+		reporthtml = new ExtentHtmlReporter("C:\\Vinita\\Report\\Extent.html");
 		extent = new ExtentReports();
 		extent.attachReporter(reporthtml);
 

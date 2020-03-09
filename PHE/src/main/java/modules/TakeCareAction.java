@@ -1,5 +1,8 @@
 package modules;
 
+import org.openqa.selenium.By;
+
+import pageobjects.BaseClass;
 import pageobjects.TakingCarePage;
 
 public class TakeCareAction {
@@ -35,4 +38,13 @@ public class TakeCareAction {
 	public static void clickNext() {
 		TakingCarePage.next3.click();
 	}
+	public static void ValidateDisableMessage() {
+		String DisableMessage = BaseClass.driver.findElement(By.xpath("//div[@id='hay-container-embedded']//div[2]/div/p[1]")).getText();
+		String ValidMessage = "You've told us you have an illness or disability that makes taking care of yourself more difficult.";
+		if(DisableMessage.contains(ValidMessage)) {
+			System.out.println("validating disable message pass");
+		}else {
+			System.out.println("validating disable message fail");
+		}	
+}
 }

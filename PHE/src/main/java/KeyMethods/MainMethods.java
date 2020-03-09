@@ -79,7 +79,7 @@ public class MainMethods extends BaseClass {
 			}		
 			BaseClass.driver.get(rp.ReadFile("url", "config.properties"));
 			OneYouLand.AcceptCookies();	
-	        Reporter.LogStepPass("first step");
+	        Reporter.LogStepPass("Pass!! Survey Started : ");
 	}
 	
 	
@@ -88,6 +88,7 @@ public class MainMethods extends BaseClass {
 			PageFactory.initElements(driver, OneYouLandingPage.class);
 
 			OneYouLand.clickStartQuiz();
+			
 			OneYouLand.enterFirstName(TData.get("Name"));
 
 			if (TData.get("Gender").equalsIgnoreCase("m")) {
@@ -98,14 +99,15 @@ public class MainMethods extends BaseClass {
 
 			}
 			OneYouLand.enterAge(TData.get("Age"));
-			OneYouLand.clickNext();
-			Reporter.LogStepPass("Second step");
+			
+		    OneYouLand.clickNext();
+			Reporter.LogStepPass("Pass!! Patient Personal Info :");
 	}
 	
 	
 	public void Fill_How_are_you_feeling_right_now(HashMap<String, String> TData) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-
+         
 		hfrnw.dragReallyKnackered(Integer.parseInt(TData.get("ReallyKnackered")));
 		hfrnw.dragCanRunForMiles(Integer.parseInt(TData.get("CanRunForMiles")));
 		hfrnw.dragFeelingCalm(Integer.parseInt(TData.get("FeelingCalm")));
@@ -114,7 +116,7 @@ public class MainMethods extends BaseClass {
 		hfrnw.dragDownDumps(Integer.parseInt(TData.get("DownDump")));
 		OneYouLand.clickNext();
 		Thread.sleep(2000);
-		Reporter.LogStepPass("third step");
+		Reporter.LogStepPass("Pass!! How are you feeling right now?");
 	}
 	
 	
@@ -128,32 +130,30 @@ public class MainMethods extends BaseClass {
 	 String [] split_options=options.split(delim);
 		int len = split_options.length;
 		for (int i = 0; i < len; i++) {
-			if (split_options[i].equalsIgnoreCase("1"))
-				TakeCareAction.selectIDontHaveTime();
-
-			else if (split_options[i].equalsIgnoreCase("2"))
-				TakeCareAction.selectILookAfterOthers();
-
-			else if (split_options[i].equalsIgnoreCase("3"))
-				TakeCareAction.selectIDontKnowWhatToDo();
-
-			else if (split_options[i].equalsIgnoreCase("4"))
-				TakeCareAction.selectIDontHaveTheMoney();
-
-			else if (split_options[i].equalsIgnoreCase("5"))
-				TakeCareAction.selectIStartCantKeepUp();
-
-			else if (split_options[i].equalsIgnoreCase("6"))
+			if (split_options[i].equalsIgnoreCase("1")) {
+				TakeCareAction.selectIDontHaveTime();				
+			}else if (split_options[i].equalsIgnoreCase("2")) {
+				TakeCareAction.selectILookAfterOthers();				
+			}else if (split_options[i].equalsIgnoreCase("3")) {
+				TakeCareAction.selectIDontKnowWhatToDo();				
+			}else if (split_options[i].equalsIgnoreCase("4")) {
+				TakeCareAction.selectIDontHaveTheMoney();				
+			}else if (split_options[i].equalsIgnoreCase("5")) {
+				TakeCareAction.selectIStartCantKeepUp();				
+			}else if (split_options[i].equalsIgnoreCase("6")) {
 				TakeCareAction.selectIllDisabled();
-			else if (split_options[i].equalsIgnoreCase("7"))
-				TakeCareAction.selectITakeGoodCare();
-		  
+				OneYouLand.clickNext();
+				TakeCareAction.ValidateDisableMessage();
+			}else if (split_options[i].equalsIgnoreCase("7")) {
+				TakeCareAction.selectITakeGoodCare();				
+			}
 		}
+
 		JavascriptExecutor jse=(JavascriptExecutor)BaseClass.driver; 
 		jse.executeScript("window.scrollBy(0,250)", "");
 		//TakeCareAction.clickNext();		
 		OneYouLand.clickNext();
-		Reporter.LogStepPass("Fourth step");
+		Reporter.LogStepPass("Pass! What stops you taking care of yourself?");
 	}
 	
 	
@@ -194,7 +194,7 @@ public class MainMethods extends BaseClass {
 			  
 		 }
 			OneYouLand.clickNext();
-			Reporter.LogStepPass("Fifth step");
+			Reporter.LogStepPass("Pass!! Number of Dependents");
 	}
 	
 	
@@ -233,7 +233,7 @@ public class MainMethods extends BaseClass {
 		jse.executeScript("window.scrollBy(0,250)", "");
 		Thread.sleep(1000);
 		OneYouLand.clickNext();
-		
+		Reporter.LogStepPass("Pass!! Health Priorities");
 		//HealthPrioritiesAction.clickNextPage();		
 	}
 	
@@ -287,6 +287,7 @@ public class MainMethods extends BaseClass {
 		jse.executeScript("window.scrollBy(0,250)", "");
 		Thread.sleep(1000);
 		OneYouLand.clickNext();
+		Reporter.LogStepPass("Pass!! Favourite Drinks Selected");
 		//TakeCareAction.clickNext(); Thread.sleep(1000);
 	
 	}
@@ -450,10 +451,13 @@ public class MainMethods extends BaseClass {
 			AlcoholIntakeAction.clickMostly();
 			DaysDrink(options_days);
 			WeeklyDrinkVol("1", "WeekDays", options_volume_WD);
+			JavascriptExecutor jse = (JavascriptExecutor)BaseClass.driver;
 			jse.executeScript("window.scrollBy(0,250)", "");
 			WeeklyDrinkVol("1", "WeekEnds", options_volume_WE);
 			//AlcoholIntakeAction.clickNext_AI();
+			Reporter.LogStepPass("Pass !! You Drink : Most Weeks");
 			OneYouLand.clickNext();
+			
 		}
 
 		else if (options_freq.equalsIgnoreCase("2")) {
@@ -461,6 +465,7 @@ public class MainMethods extends BaseClass {
 			OneYouLand.clickNext();
 			Thread.sleep(1000);
 			WeeklyDrinkVol("2", "WeekDays", options_volume_WD);
+			Reporter.LogStepPass("Pass !! You Drink : 2-4 times in a month");
 			OneYouLand.clickNext();
 			Thread.sleep(1000);
 
@@ -470,9 +475,11 @@ public class MainMethods extends BaseClass {
 			OneYouLand.clickNext();
 			Thread.sleep(1000);
 			WeeklyDrinkVol("3", "WeekDays", options_volume_WD);
-			OneYouLand.clickNext();Thread.sleep(500);
-			AlcoholIntakeAction.clickNoToDrink();
-			OneYouLand.clickNext();Thread.sleep(500);
+			Reporter.LogStepPass("Pass !! You Drink : MOnthly or less");
+			OneYouLand.clickNext();
+			Thread.sleep(500);
+			//AlcoholIntakeAction.clickNoToDrink();
+			//OneYouLand.clickNext();Thread.sleep(500);
 			
 			Thread.sleep(1000);
 		}
@@ -480,6 +487,7 @@ public class MainMethods extends BaseClass {
 		else if (options_freq.equalsIgnoreCase("4"))
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
+		Reporter.LogStepPass("Pass !! You dont drink");
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
 		System.out.println("Alcohol Frequency done");
@@ -597,14 +605,18 @@ public class MainMethods extends BaseClass {
 	    // Write code here that turns the phrase above into concrete actions
 	    PageFactory.initElements(BaseClass.driver,SmokePage.class);
 	    String options_smoke = TData.get("options_smoke");
-	    if (options_smoke.equalsIgnoreCase("1"))
-			SmokeAction.selectEveryDay();
-		else if (options_smoke.equalsIgnoreCase("2"))
-			SmokeAction.selectSometimes();
-		else if (options_smoke.equalsIgnoreCase("3"))
-			SmokeAction.selectQuit();
-		else if (options_smoke.equalsIgnoreCase("4"))
-			SmokeAction.selectNeverHad();
+	    if (options_smoke.equalsIgnoreCase("1")) {
+	    	Reporter.LogStepPass("Pass !! You Smoke : Everyday");
+			SmokeAction.selectEveryDay();}
+		else if (options_smoke.equalsIgnoreCase("2")) {
+			Reporter.LogStepPass("Pass !! You Smoke : Not Everyday");
+			SmokeAction.selectSometimes();}
+		else if (options_smoke.equalsIgnoreCase("3")) {
+			Reporter.LogStepPass("Pass !! You Smoke : You have quit");
+			SmokeAction.selectQuit();}
+		else if (options_smoke.equalsIgnoreCase("4")) {
+			Reporter.LogStepPass("Pass !! You Smoke : Never");
+			SmokeAction.selectNeverHad();}
 
 	    OneYouLand.clickNext();
 		Thread.sleep(1000);
@@ -684,22 +696,27 @@ public class MainMethods extends BaseClass {
 		String[] options_days_list = days.split(delim);
 		int len = options_days_list.length;
 		for (int i = 0; i < len; i++) {
-			if (options_days_list[i].equalsIgnoreCase("1"))
+			if (options_days_list[i].equalsIgnoreCase("1")) {
 				AlcoholIntakeAction.clicMonday();
-			else if (options_days_list[i].equalsIgnoreCase("2"))
+			}
+			else if (options_days_list[i].equalsIgnoreCase("2")) {
 				AlcoholIntakeAction.clickTuesday();
-			else if (options_days_list[i].equalsIgnoreCase("3"))
-				AlcoholIntakeAction.clicWednesday();
-			else if (options_days_list[i].equalsIgnoreCase("4"))
-				AlcoholIntakeAction.clickThursday();
-			else if (options_days_list[i].equalsIgnoreCase("5"))
-				AlcoholIntakeAction.clickFriday();
-			else if (options_days_list[i].equalsIgnoreCase("6"))
-				AlcoholIntakeAction.clicSaturday();
-			else if (options_days_list[i].equalsIgnoreCase("7"))
-				AlcoholIntakeAction.clicSunday();
-			else
+			}
+			else if (options_days_list[i].equalsIgnoreCase("3")) {
+				AlcoholIntakeAction.clicWednesday();}
+			else if (options_days_list[i].equalsIgnoreCase("4")) {
+				AlcoholIntakeAction.clickThursday();}
+			else if (options_days_list[i].equalsIgnoreCase("5")) {
+				AlcoholIntakeAction.clickFriday();}
+			else if (options_days_list[i].equalsIgnoreCase("6")) {
+				AlcoholIntakeAction.clicSaturday();}
+			else if (options_days_list[i].equalsIgnoreCase("7")) {
+				AlcoholIntakeAction.clicSunday();}
+			else {
 				Reporter.LogStepFail("Please choose atleast one option" + getClass());
+			}
+			
+			JavascriptExecutor jse = (JavascriptExecutor) driver; 
 			jse.executeScript("window.scrollBy(0,250)", "");
 			Thread.sleep(1000);
 			
@@ -710,7 +727,7 @@ public class MainMethods extends BaseClass {
 
 	}
 
-	public void WeeklyDrinkVol(String called, String day, String volume) {
+	public void WeeklyDrinkVol(String called, String day, String volume) throws InterruptedException {
 		String delim = ";";
 		String[] drink_list = volume.split(delim);
 		int drink_len = drink_list.length;
@@ -718,17 +735,23 @@ public class MainMethods extends BaseClass {
 			for (int j = 0; j < drink_len; j++) {
 				String[] vol_list = drink_list[j].split(",");
 
-				if (vol_list[0].equalsIgnoreCase("1"))
+				if (vol_list[0].equalsIgnoreCase("1")) {
 					AlcoholIntakeAction.clickBeer4VolWD(vol_list[1]);
-				else if (vol_list[0].equalsIgnoreCase("2"))
+				}
+				else if (vol_list[0].equalsIgnoreCase("2")) {
 					AlcoholIntakeAction.clickBeer5VolWD(vol_list[1]);
-				else if (vol_list[0].equalsIgnoreCase("3"))
+				}
+				else if (vol_list[0].equalsIgnoreCase("3")) {
 					AlcoholIntakeAction.clickSpiritVolWD(vol_list[1]);
-				else if (vol_list[0].equalsIgnoreCase("4"))
+				}
+				else if (vol_list[0].equalsIgnoreCase("4")) {
 					AlcoholIntakeAction.clickWineVolWD(vol_list[1]);
-				else
+				}
+				else {
 					Reporter.LogStepFail("Wrong Input" + getClass());
+				}
 			}
+			
 
 		}
 
@@ -781,11 +804,12 @@ public class MainMethods extends BaseClass {
 	public void findChild(String expScore) throws Exception {
 
 		String score = ResultPage.finalScore.getAttribute("class");
+		System.out.println("SCORE" + score.substring(score.length()-2) );
 		System.out.println(score + "=="+expScore);
-		if (score.substring(score.length() - 2).equalsIgnoreCase(expScore)) {
-			Reporter.LogStepPass("Score Matched");
+		if ((score.replace("hay-results__score hay-results__score--",""))==expScore) {
+			System.out.println("Score Matched");
 		}else {
-			Reporter.LogStepFail("Score Mismatch");
+			System.out.println("Score Mismatch");
 		}
 		System.out.println("Score" + score);
 	}
