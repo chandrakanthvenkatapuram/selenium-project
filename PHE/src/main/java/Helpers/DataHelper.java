@@ -2,6 +2,7 @@ package Helpers;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +25,15 @@ public class DataHelper {
 
 
 	public void LoadData() throws Exception {
+		
+//		String DirPath  = System.getProperty("user.dir");
+//		String testDataFile = DirPath +"\\TestData\\HOW_Are_You_Data.xlsx";
+		
+		String testDataFile = "C:\\Users\\ukadiyala\\Documents\\HAT_TestResults\\HOW_Data.xlsx";
+		System.out.println("Test data file - "+testDataFile);
+		//File src = new File(testDataFile)
 
-		File src = new File("C:\\Users\\Vmalik\\Documents\\HAT_TestResults\\HOW_Data.xlsx");
+		File src = new File(testDataFile);
 		FileInputStream fis = new FileInputStream(src);
 		WBook = new XSSFWorkbook(fis);
 		WSheet = WBook.getSheet("TestData");

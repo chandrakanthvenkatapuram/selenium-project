@@ -12,7 +12,9 @@ public class Report {
 	public static ExtentTest logger;
 	
 	public void reportInitiate() {
-		reporthtml = new ExtentHtmlReporter("C:\\Vinita\\Report\\Extent.html");
+		String DirPath  = System.getProperty("user.dir");
+		String ReportPath = DirPath + "\\Reports\\HowAreYou_TestReport.html";
+		reporthtml = new ExtentHtmlReporter(ReportPath);
 		extent = new ExtentReports();
 		extent.attachReporter(reporthtml);
 

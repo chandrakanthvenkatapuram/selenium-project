@@ -1,6 +1,5 @@
 package HowAreYou_Tests;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.testng.annotations.Test;
@@ -24,7 +23,7 @@ public class HowAreYou_Quiz {
 	         System.out.println("Executing for TC "+sTC);
 	         HashMap<String, String> TestData =  DataLoader.loadTestCaseData(sTC);
 	        System.out.println("Name-"+TestData.get("Name"));
-	        Reporter.reportCreator("How are you"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
+	        Reporter.reportCreator(TestData.get("TestCase")+"_"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
 	        
 	        //Start test
 	        AppKeys.Open_HowAreQuiz_website();
