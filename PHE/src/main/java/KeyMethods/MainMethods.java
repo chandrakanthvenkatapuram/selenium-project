@@ -70,6 +70,7 @@ public class MainMethods extends BaseClass {
 			PageFactory.initElements(driver, ReadPropertiesFile.class);
 			String browser = rp.ReadFile("browser", "config.properties");
 			//String browser = "chrome";
+			//Added new line
 			if (browser.equalsIgnoreCase("chrome")) {
 				System.setProperty("webdriver.chrome.driver", "C:\\Softwares\\Drivers\\chromedriver.exe");
 				BaseClass.driver = new ChromeDriver();
