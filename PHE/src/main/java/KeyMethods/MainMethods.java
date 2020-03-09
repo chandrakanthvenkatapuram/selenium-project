@@ -80,7 +80,7 @@ public class MainMethods extends BaseClass {
 			}		
 			BaseClass.driver.get(rp.ReadFile("url", "config.properties"));
 			OneYouLand.AcceptCookies();	
-	        Reporter.LogStepPass("Pass!! Survey Started : ");
+	      
 	}
 	
 	
@@ -102,14 +102,14 @@ public class MainMethods extends BaseClass {
 			OneYouLand.enterAge(TData.get("Age"));
 			
 		    OneYouLand.clickNext();
-			Reporter.LogStepPass("Pass!! Patient Personal Info :");
+		    Reporter.LogStepPass("Survey Started for : " + TData.get("Name"));
 	}
 	
 	
 	public void Fill_How_are_you_feeling_right_now(HashMap<String, String> TData) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
          
-		hfrnw.dragReallyKnackered(Integer.parseInt(TData.get("ReallyKnackered")));
+	    hfrnw.dragReallyKnackered(Integer.parseInt(TData.get("ReallyKnackered")));
 		hfrnw.dragCanRunForMiles(Integer.parseInt(TData.get("CanRunForMiles")));
 		hfrnw.dragFeelingCalm(Integer.parseInt(TData.get("FeelingCalm")));
 		hfrnw.dragSleeplessNights(Integer.parseInt(TData.get("SleeplessNights")));
@@ -117,7 +117,7 @@ public class MainMethods extends BaseClass {
 		hfrnw.dragDownDumps(Integer.parseInt(TData.get("DownDump")));
 		OneYouLand.clickNext();
 		Thread.sleep(2000);
-		Reporter.LogStepPass("Pass!! How are you feeling right now?");
+		Reporter.LogStepPass("Health Info : "+ "\n" + "ReallyKnackered : " + TData.get("ReallyKnackered") + "\n" + "CanRunForMiles :\n " + TData.get("CanRunForMiles") +" FeelingCalm :\n " + TData.get("FeelingCalm") +"SleeplessNights :\n " + TData.get("SleeplessNights") +" LeanMean :\n " + TData.get("LeanMean") +"DownDump : \n " + TData.get("DownDump"));
 	}
 	
 	
@@ -132,21 +132,29 @@ public class MainMethods extends BaseClass {
 		int len = split_options.length;
 		for (int i = 0; i < len; i++) {
 			if (split_options[i].equalsIgnoreCase("1")) {
-				TakeCareAction.selectIDontHaveTime();				
+				
+				TakeCareAction.selectIDontHaveTime();
+				 Reporter.LogStepPass("Taking Care Option : I don't have the time");
 			}else if (split_options[i].equalsIgnoreCase("2")) {
-				TakeCareAction.selectILookAfterOthers();				
+				TakeCareAction.selectILookAfterOthers();
+				Reporter.LogStepPass("Taking Care Option : It's more important I look after others");
 			}else if (split_options[i].equalsIgnoreCase("3")) {
-				TakeCareAction.selectIDontKnowWhatToDo();				
+				TakeCareAction.selectIDontKnowWhatToDo();
+				Reporter.LogStepPass("Taking Care Option : I don't know what to do");
 			}else if (split_options[i].equalsIgnoreCase("4")) {
-				TakeCareAction.selectIDontHaveTheMoney();				
+				TakeCareAction.selectIDontHaveTheMoney();	
+				Reporter.LogStepPass("Taking Care Option : I don't have the money");
 			}else if (split_options[i].equalsIgnoreCase("5")) {
-				TakeCareAction.selectIStartCantKeepUp();				
+				TakeCareAction.selectIStartCantKeepUp();	
+				Reporter.LogStepPass("Taking Care Option : I start but can't keep up");
 			}else if (split_options[i].equalsIgnoreCase("6")) {
 				TakeCareAction.selectIllDisabled();
 				OneYouLand.clickNext();
 				TakeCareAction.ValidateDisableMessage();
+				Reporter.LogStepPass("Taking Care Option : I'm ill or disabled");
 			}else if (split_options[i].equalsIgnoreCase("7")) {
-				TakeCareAction.selectITakeGoodCare();				
+				TakeCareAction.selectITakeGoodCare();	
+				Reporter.LogStepPass("Taking Care Option : Nothing - I take good care of myself");
 			}
 		}
 
@@ -154,7 +162,7 @@ public class MainMethods extends BaseClass {
 		jse.executeScript("window.scrollBy(0,250)", "");
 		//TakeCareAction.clickNext();		
 		OneYouLand.clickNext();
-		Reporter.LogStepPass("Pass! What stops you taking care of yourself?");
+		
 	}
 	
 	
@@ -166,36 +174,52 @@ public class MainMethods extends BaseClass {
 		 String [] split_options=choices.split(delim);
 			int len = split_options.length;
 			for (int i = 0; i < len; i++) {
-				if (split_options[i].equalsIgnoreCase("1"))
+				if (split_options[i].equalsIgnoreCase("1")) {
 					BeingHealthyAction.selectMyPartner();
-				
-				else if (split_options[i].equalsIgnoreCase("2"))
+					Reporter.LogStepPass("Dependents : My partner");
+				}
+				else if (split_options[i].equalsIgnoreCase("2")) {
 				BeingHealthyAction.selectMyKids();
+				Reporter.LogStepPass("Dependents :My kids");
+				}
 
-				else if (split_options[i].equalsIgnoreCase("3"))
+				else if (split_options[i].equalsIgnoreCase("3")) {
 					BeingHealthyAction.selectMyParents();
+					Reporter.LogStepPass("Dependents : My parents");
+				}
 
-				else if (split_options[i].equalsIgnoreCase("4"))
+				else if (split_options[i].equalsIgnoreCase("4")) {
 					BeingHealthyAction.selectMyGrandChildren();
-
-				else if (split_options[i].equalsIgnoreCase("5"))
+					Reporter.LogStepPass("Dependents : My grandkids");
+				}
+				else if (split_options[i].equalsIgnoreCase("5")) {
 					BeingHealthyAction.selectMyCloseFriends();
+					Reporter.LogStepPass("Dependents : My close friends");
+				}
 
-				else if (split_options[i].equalsIgnoreCase("6"))
+				else if (split_options[i].equalsIgnoreCase("6")) {
 					BeingHealthyAction.selectMyCloseFriends();
+					Reporter.LogStepPass("Dependents : My close friends");
+					}
 				
-				else if (split_options[i].equalsIgnoreCase("7"))
+				else if (split_options[i].equalsIgnoreCase("7")) {
 					BeingHealthyAction.selectMyBrotherSister();
+					Reporter.LogStepPass("Dependents : My brothers and sisters");
+				}
 				
-				else if (split_options[i].equalsIgnoreCase("8"))
+				else if (split_options[i].equalsIgnoreCase("8")) {
 					BeingHealthyAction.selectMyPets();
+					Reporter.LogStepPass("Dependents : My pets");
+				}
 				
-				else if (split_options[i].equalsIgnoreCase("9"))
+				else if (split_options[i].equalsIgnoreCase("9")) {
 					BeingHealthyAction.selectNone();		
+					Reporter.LogStepPass("Dependents : None of these");
+				}
 			  
 		 }
 			OneYouLand.clickNext();
-			Reporter.LogStepPass("Pass!! Number of Dependents");
+			
 	}
 	
 	
@@ -207,25 +231,43 @@ public class MainMethods extends BaseClass {
 		String[] split_options = Priorityoptions.split(delim);
 		int len = split_options.length;
 		for (int i = 0; i < len; i++) {
-			if (split_options[i].equalsIgnoreCase("1"))
+			if (split_options[i].equalsIgnoreCase("1")) {
 				HealthPrioritiesAction.selectFittingJeans();
-
-			else if (split_options[i].equalsIgnoreCase("2"))
+			Reporter.LogStepPass("Health Priorities : Fitting into my jeans");
+			}
+			else if (split_options[i].equalsIgnoreCase("2")) {
 				HealthPrioritiesAction.selectMorweEnergy();
-			else if (split_options[i].equalsIgnoreCase("3"))
+				Reporter.LogStepPass("Health Priorities : Having more energy");
+			}
+			else if (split_options[i].equalsIgnoreCase("3")) {
 				HealthPrioritiesAction.selectAchespain();
-			else if (split_options[i].equalsIgnoreCase("4"))
+				Reporter.LogStepPass("Health Priorities : Avoiding aches and pains");
+			}
+			else if (split_options[i].equalsIgnoreCase("4")) {
 				HealthPrioritiesAction.selectFeelingYoung();
-			else if (split_options[i].equalsIgnoreCase("5"))
+				Reporter.LogStepPass("Health Priorities : Feeling young");
+			}
+			else if (split_options[i].equalsIgnoreCase("5")) {
 				HealthPrioritiesAction.selectStayIndependent();
-			else if (split_options[i].equalsIgnoreCase("6"))
+				Reporter.LogStepPass("Health Priorities : Staying independent");
+			}
+			else if (split_options[i].equalsIgnoreCase("6")) {
 				HealthPrioritiesAction.selectMindSharp();
-			else if (split_options[i].equalsIgnoreCase("7"))
+				Reporter.LogStepPass("Health Priorities : Keeping my mind sharp");
+			}
+			else if (split_options[i].equalsIgnoreCase("7")) {
 				HealthPrioritiesAction.selectSocialLife();
+				Reporter.LogStepPass("Health Priorities : Having a more active social life");
+			}
 			else if (split_options[i].equalsIgnoreCase("8"))
+			{
 				HealthPrioritiesAction.selectYoungLooking();
-			else if (split_options[i].equalsIgnoreCase("9"))
+				Reporter.LogStepPass("Health Priorities : Staying young looking");
+			}
+			else if (split_options[i].equalsIgnoreCase("9")) {
 				HealthPrioritiesAction.selectForKids();
+				Reporter.LogStepPass("Health Priorities : Being there for my kids and grandkids");
+			}
 
 		}
 		JavascriptExecutor jse=(JavascriptExecutor)BaseClass.driver; 

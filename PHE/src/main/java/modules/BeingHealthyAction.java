@@ -1,8 +1,11 @@
 package modules;
 
+import Helpers.Report;
 import pageobjects.BeingHealthy;
 
 public class BeingHealthyAction {
+	
+
 
 	public static void selectMyPartner()
 	{

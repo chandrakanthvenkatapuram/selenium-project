@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46122" started-at="2020-03-09T12:42:02Z" finished-at="2020-03-09T12:42:48Z">
+  <suite name="Default suite" duration-ms="46840" started-at="2020-03-09T14:32:58Z" finished-at="2020-03-09T14:33:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="46122" started-at="2020-03-09T12:42:02Z" finished-at="2020-03-09T12:42:48Z">
+    <test name="Default test" duration-ms="46840" started-at="2020-03-09T14:32:58Z" finished-at="2020-03-09T14:33:45Z">
       <class name="HowAreYou_Tests.HowAreYou_Quiz">
-        <test-method status="PASS" signature="HowAreQuizTest()[pri:0, instance:HowAreYou_Tests.HowAreYou_Quiz@6d4b1c02]" name="HowAreQuizTest" duration-ms="46091" started-at="2020-03-09T12:42:02Z" finished-at="2020-03-09T12:42:48Z">
+        <test-method status="PASS" signature="HowAreQuizTest()[pri:0, instance:HowAreYou_Tests.HowAreYou_Quiz@7cd62f43]" name="HowAreQuizTest" duration-ms="46800" started-at="2020-03-09T14:32:58Z" finished-at="2020-03-09T14:33:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HowAreQuizTest -->

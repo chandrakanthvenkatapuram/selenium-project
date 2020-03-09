@@ -24,11 +24,11 @@ public class HowAreYou_Quiz {
 	         System.out.println("Executing for TC "+sTC);
 	         HashMap<String, String> TestData =  DataLoader.loadTestCaseData(sTC);
 	        System.out.println("Name-"+TestData.get("Name"));
-	        Reporter.reportCreator("How-Are-You-Quiz_"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
+	        Reporter.reportCreator("How are you"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
 	        
 	        //Start test
 	        AppKeys.Open_HowAreQuiz_website();
-
+            
 	        AppKeys.Fill_Name_Gender_Age_clickNext(TestData);
 	        
 	        AppKeys.Fill_How_are_you_feeling_right_now(TestData);
