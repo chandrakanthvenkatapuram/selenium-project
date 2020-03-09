@@ -355,7 +355,7 @@ public class MainMethods extends BaseClass {
 		}
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
-
+		Reporter.LogStepPass("Pass!! Favourite Snacks Selected");
 	}
 	
 	public void Choose_my_favorite_breakfast_out_of_given_options(HashMap<String, String> TData) throws Throwable {
@@ -376,7 +376,7 @@ public class MainMethods extends BaseClass {
 	    OneYouLand.clickNext();
 	    Thread.sleep(1000);
 	    System.out.println("Break Fast Options done");
-	    
+	    Reporter.LogStepPass("Pass!! Breakfast options Selected");
 	}
 	
 
@@ -418,6 +418,7 @@ public class MainMethods extends BaseClass {
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
 		System.out.println("NonVeg options done");
+		Reporter.LogStepPass("Pass!! NonVeg options Selected");
 	}
 	
 	public void Choose_servings_of_fruits_and_vegetables_from(HashMap<String, String> TData) throws Throwable {
@@ -530,7 +531,7 @@ public class MainMethods extends BaseClass {
 		else if (options_freq.equalsIgnoreCase("4"))
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
-		Reporter.LogStepPass("Pass !! You dont drink");
+	//	Reporter.LogStepPass("Pass !! You dont drink");
 		OneYouLand.clickNext();
 		Thread.sleep(1000);
 		System.out.println("Alcohol Frequency done");
@@ -689,6 +690,7 @@ public class MainMethods extends BaseClass {
 		Thread.sleep(1000);
 		PageFactory.initElements(BaseClass.driver, ResultPage.class);
 		findChild(expScore);
+		Reporter.LogStepPass("Pass !! Your Score" + expScore);
 	}
 
 	public void Validate_messages_against_each_section() throws Throwable {
@@ -851,8 +853,11 @@ public class MainMethods extends BaseClass {
 		System.out.println(score + "=="+expScore);
 		if ((score.replace("hay-results__score hay-results__score--",""))==expScore) {
 			System.out.println("Score Matched");
+			Reporter.LogStepPass("Actual Acore :" + score);
+			
 		}else {
 			System.out.println("Score Mismatch");
+			Reporter.LogStepFail("Actual Acore :" + score);
 		}
 		System.out.println("Score" + score);
 	}
