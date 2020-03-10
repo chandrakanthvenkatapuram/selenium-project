@@ -32,7 +32,7 @@ public class Report {
 		logger.log(Status.FAIL, StepDes);
 	}
 	
-	public void LogStepOnfo(String StepDes) {		
+	public void LogStepInfo(String StepDes) {		
 		logger.log(Status.INFO, StepDes);
 	}
 	

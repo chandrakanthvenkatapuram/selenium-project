@@ -102,7 +102,7 @@ public class MainMethods extends BaseClass {
 			OneYouLand.enterAge(TData.get("Age"));
 			
 		    OneYouLand.clickNext();
-		    Reporter.LogStepPass("Survey Started for : " + TData.get("Name"));
+		    Reporter.LogStepInfo("Quiz Started for : " + TData.get("Name"));
 	}
 	
 	
@@ -117,7 +117,7 @@ public class MainMethods extends BaseClass {
 		hfrnw.dragDownDumps(Integer.parseInt(TData.get("DownDump")));
 		OneYouLand.clickNext();
 		Thread.sleep(2000);
-		Reporter.LogStepPass("Health Info : "+ "\n" + "ReallyKnackered : " + TData.get("ReallyKnackered") + "\n" + "CanRunForMiles :\n " + TData.get("CanRunForMiles") +" FeelingCalm :\n " + TData.get("FeelingCalm") +"SleeplessNights :\n " + TData.get("SleeplessNights") +" LeanMean :\n " + TData.get("LeanMean") +"DownDump : \n " + TData.get("DownDump"));
+		Reporter.LogStepInfo("Health Info : "+ "\n" + "ReallyKnackered : " + TData.get("ReallyKnackered") + "\n" + "CanRunForMiles :\n " + TData.get("CanRunForMiles") +" FeelingCalm :\n " + TData.get("FeelingCalm") +"SleeplessNights :\n " + TData.get("SleeplessNights") +" LeanMean :\n " + TData.get("LeanMean") +"DownDump : \n " + TData.get("DownDump"));
 	}
 	
 	
@@ -131,30 +131,29 @@ public class MainMethods extends BaseClass {
 	 String [] split_options=options.split(delim);
 		int len = split_options.length;
 		for (int i = 0; i < len; i++) {
-			if (split_options[i].equalsIgnoreCase("1")) {
-				
+			if (split_options[i].equalsIgnoreCase("1")) {				
 				TakeCareAction.selectIDontHaveTime();
-				 Reporter.LogStepPass("Taking Care Option : I don't have the time");
+				 Reporter.LogStepInfo("Taking Care Option : I don't have the time");
 			}else if (split_options[i].equalsIgnoreCase("2")) {
 				TakeCareAction.selectILookAfterOthers();
-				Reporter.LogStepPass("Taking Care Option : It's more important I look after others");
+				Reporter.LogStepInfo("Taking Care Option : It's more important I look after others");
 			}else if (split_options[i].equalsIgnoreCase("3")) {
 				TakeCareAction.selectIDontKnowWhatToDo();
-				Reporter.LogStepPass("Taking Care Option : I don't know what to do");
+				Reporter.LogStepInfo("Taking Care Option : I don't know what to do");
 			}else if (split_options[i].equalsIgnoreCase("4")) {
 				TakeCareAction.selectIDontHaveTheMoney();	
-				Reporter.LogStepPass("Taking Care Option : I don't have the money");
+				Reporter.LogStepInfo("Taking Care Option : I don't have the money");
 			}else if (split_options[i].equalsIgnoreCase("5")) {
 				TakeCareAction.selectIStartCantKeepUp();	
-				Reporter.LogStepPass("Taking Care Option : I start but can't keep up");
+				Reporter.LogStepInfo("Taking Care Option : I start but can't keep up");
 			}else if (split_options[i].equalsIgnoreCase("6")) {
 				TakeCareAction.selectIllDisabled();
 				OneYouLand.clickNext();
 				TakeCareAction.ValidateDisableMessage();
-				Reporter.LogStepPass("Taking Care Option : I'm ill or disabled");
+				Reporter.LogStepInfo("Taking Care Option : I'm ill or disabled");
 			}else if (split_options[i].equalsIgnoreCase("7")) {
 				TakeCareAction.selectITakeGoodCare();	
-				Reporter.LogStepPass("Taking Care Option : Nothing - I take good care of myself");
+				Reporter.LogStepInfo("Taking Care Option : Nothing - I take good care of myself");
 			}
 		}
 
@@ -176,45 +175,45 @@ public class MainMethods extends BaseClass {
 			for (int i = 0; i < len; i++) {
 				if (split_options[i].equalsIgnoreCase("1")) {
 					BeingHealthyAction.selectMyPartner();
-					Reporter.LogStepPass("Dependents : My partner");
+					Reporter.LogStepInfo("Dependents : My partner");
 				}
 				else if (split_options[i].equalsIgnoreCase("2")) {
 				BeingHealthyAction.selectMyKids();
-				Reporter.LogStepPass("Dependents :My kids");
+				Reporter.LogStepInfo("Dependents :My kids");
 				}
 
 				else if (split_options[i].equalsIgnoreCase("3")) {
 					BeingHealthyAction.selectMyParents();
-					Reporter.LogStepPass("Dependents : My parents");
+					Reporter.LogStepInfo("Dependents : My parents");
 				}
 
 				else if (split_options[i].equalsIgnoreCase("4")) {
 					BeingHealthyAction.selectMyGrandChildren();
-					Reporter.LogStepPass("Dependents : My grandkids");
+					Reporter.LogStepInfo("Dependents : My grandkids");
 				}
 				else if (split_options[i].equalsIgnoreCase("5")) {
 					BeingHealthyAction.selectMyCloseFriends();
-					Reporter.LogStepPass("Dependents : My close friends");
+					Reporter.LogStepInfo("Dependents : My close friends");
 				}
 
 				else if (split_options[i].equalsIgnoreCase("6")) {
 					BeingHealthyAction.selectMyCloseFriends();
-					Reporter.LogStepPass("Dependents : My close friends");
+					Reporter.LogStepInfo("Dependents : My close friends");
 					}
 				
 				else if (split_options[i].equalsIgnoreCase("7")) {
 					BeingHealthyAction.selectMyBrotherSister();
-					Reporter.LogStepPass("Dependents : My brothers and sisters");
+					Reporter.LogStepInfo("Dependents : My brothers and sisters");
 				}
 				
 				else if (split_options[i].equalsIgnoreCase("8")) {
 					BeingHealthyAction.selectMyPets();
-					Reporter.LogStepPass("Dependents : My pets");
+					Reporter.LogStepInfo("Dependents : My pets");
 				}
 				
 				else if (split_options[i].equalsIgnoreCase("9")) {
 					BeingHealthyAction.selectNone();		
-					Reporter.LogStepPass("Dependents : None of these");
+					Reporter.LogStepInfo("Dependents : None of these");
 				}
 			  
 		 }
@@ -237,36 +236,36 @@ public class MainMethods extends BaseClass {
 			}
 			else if (split_options[i].equalsIgnoreCase("2")) {
 				HealthPrioritiesAction.selectMorweEnergy();
-				Reporter.LogStepPass("Health Priorities : Having more energy");
+				Reporter.LogStepInfo("Health Priorities : Having more energy");
 			}
 			else if (split_options[i].equalsIgnoreCase("3")) {
 				HealthPrioritiesAction.selectAchespain();
-				Reporter.LogStepPass("Health Priorities : Avoiding aches and pains");
+				Reporter.LogStepInfo("Health Priorities : Avoiding aches and pains");
 			}
 			else if (split_options[i].equalsIgnoreCase("4")) {
 				HealthPrioritiesAction.selectFeelingYoung();
-				Reporter.LogStepPass("Health Priorities : Feeling young");
+				Reporter.LogStepInfo("Health Priorities : Feeling young");
 			}
 			else if (split_options[i].equalsIgnoreCase("5")) {
 				HealthPrioritiesAction.selectStayIndependent();
-				Reporter.LogStepPass("Health Priorities : Staying independent");
+				Reporter.LogStepInfo("Health Priorities : Staying independent");
 			}
 			else if (split_options[i].equalsIgnoreCase("6")) {
 				HealthPrioritiesAction.selectMindSharp();
-				Reporter.LogStepPass("Health Priorities : Keeping my mind sharp");
+				Reporter.LogStepInfo("Health Priorities : Keeping my mind sharp");
 			}
 			else if (split_options[i].equalsIgnoreCase("7")) {
 				HealthPrioritiesAction.selectSocialLife();
-				Reporter.LogStepPass("Health Priorities : Having a more active social life");
+				Reporter.LogStepInfo("Health Priorities : Having a more active social life");
 			}
 			else if (split_options[i].equalsIgnoreCase("8"))
 			{
 				HealthPrioritiesAction.selectYoungLooking();
-				Reporter.LogStepPass("Health Priorities : Staying young looking");
+				Reporter.LogStepInfo("Health Priorities : Staying young looking");
 			}
 			else if (split_options[i].equalsIgnoreCase("9")) {
 				HealthPrioritiesAction.selectForKids();
-				Reporter.LogStepPass("Health Priorities : Being there for my kids and grandkids");
+				Reporter.LogStepInfo("Health Priorities : Being there for my kids and grandkids");
 			}
 
 		}
