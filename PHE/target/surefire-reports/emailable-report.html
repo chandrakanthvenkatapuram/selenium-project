@@ -9,10 +9,68 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">50,917</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">17,716</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">HowAreYou_Tests.HowAreYou_Quiz</td><td><a href="#m0">HowAreQuizTest</a></td><td rowspan="1">1583599099381</td><td rowspan="1">50881</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">HowAreYou_Tests.HowAreYou_Quiz</td><td><a href="#m0">HowAreQuizTest</a></td><td rowspan="1">1583770938835</td><td rowspan="1">17674</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">HowAreYou_Tests.HowAreYou_Quiz#HowAreQuizTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">HowAreYou_Tests.HowAreYou_Quiz#HowAreQuizTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: session not created
+from chrome not reachable
+  (Session info: chrome=80.0.3987.132)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DELLG02BWX1&apos;, ip: &apos;192.168.10.226&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: Backtrace:
+	Ordinal0 [0x00950C83+1707139]
+	Ordinal0 [0x008B68F1+1075441]
+	Ordinal0 [0x0082DE72+515698]
+	Ordinal0 [0x00827CA8+490664]
+	Ordinal0 [0x0082839B+492443]
+	Ordinal0 [0x008292F5+496373]
+	Ordinal0 [0x00824F05+478981]
+	Ordinal0 [0x0082ECA0+519328]
+	Ordinal0 [0x007DCA67+182887]
+	Ordinal0 [0x007DBDDD+179677]
+	Ordinal0 [0x007D9D4B+171339]
+	Ordinal0 [0x007C1D4A+73034]
+	Ordinal0 [0x007C2DC0+77248]
+	Ordinal0 [0x007C2D59+77145]
+	Ordinal0 [0x008CBB67+1162087]
+	GetHandleVerifier [0x009EA966+508998]
+	GetHandleVerifier [0x009EA6A4+508292]
+	GetHandleVerifier [0x009FF7B7+594583]
+	GetHandleVerifier [0x009EB1D6+511158]
+	Ordinal0 [0x008C402C+1130540]
+	Ordinal0 [0x008CD4CB+1168587]
+	Ordinal0 [0x008CD633+1168947]
+	Ordinal0 [0x008E5B35+1268533]
+	BaseThreadInitThunk [0x760F6359+25]
+	RtlGetAppContainerNamedObjectPath [0x771A7B74+228]
+	RtlGetAppContainerNamedObjectPath [0x771A7B44+180]
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:498)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:471)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
+	at KeyMethods.MainMethods.Open_HowAreQuiz_website(MainMethods.java:78)
+	at HowAreYou_Tests.HowAreYou_Quiz.HowAreQuizTest(HowAreYou_Quiz.java:30)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

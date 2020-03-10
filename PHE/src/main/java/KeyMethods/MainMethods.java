@@ -2,12 +2,21 @@ package KeyMethods;
 
 
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -849,22 +858,27 @@ public class MainMethods extends BaseClass {
 	public void findChild(String expScore) throws Exception {
 
 		String score = ResultPage.finalScore.getAttribute("class");
+		
 		System.out.println("SCORE" + score.substring(score.length()-2) );
-		System.out.println(score + "=="+expScore);
-		if ((score.replace("hay-results__score hay-results__score--",""))==expScore) {
+		String scores = (score.replace("hay-results__score hay-results__score--",""));
+		System.out.println(scores + "=="+expScore);
+		if (scores.equals(expScore)) {
 			System.out.println("Score Matched");
-			Reporter.LogStepPass("Actual Acore :" + score);
+			Reporter.LogStepPass("Actual Acore :" + scores);
 			
 		}else {
 			System.out.println("Score Mismatch");
-			Reporter.LogStepFail("Actual Acore :" + score);
+			Reporter.LogStepFail("Actual Acore :" + scores);
 		}
-		System.out.println("Score" + score);
+		System.out.println("Score" + scores);
 	}
 	
 	public void validateMovingContent(String exMoving) {
 
+		//pass the path captured by this mehtod in to the extent reports 
+		 
 		String text1 = ResultPage.scoreMoving.getText();
+		
 		System.out.println("Expected text-" + exMoving + "/n" + "ActualText-" + text1);
 		// assertEquals("Verify message", exMoving, text1);
 		if (text1.contains(exMoving)) {
@@ -872,5 +886,28 @@ public class MainMethods extends BaseClass {
 		} else {
 			Reporter.LogStepFail("Content validation of Moving section is failed");			
 		}
+	}
+	
+	/*
+	 * Method : TakeScreenshot
+	 * Dated : 09/03/2020
+	 * Description : This function is used to capture screenshot and save it on desired location
+	 * 
+	 * */
+	
+	public static String takeScreenshot(WebDriver driver,String screenShotName) throws IOException
+	{
+		String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		//Call getScreenshotAs method to create image file
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		//Move image file to new destination
+		
+		//Copy file at destination
+		String destination = System.getProperty("user.dir") + "/FailedTestsScreenshots/"+screenShotName+dateName+".png";
+		File finalDestination = new File(destination);
+		FileUtils.copyFile(SrcFile, finalDestination);
+		return destination;
+		 
 	}
 }
