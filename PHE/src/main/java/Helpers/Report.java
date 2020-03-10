@@ -30,6 +30,7 @@ public class Report {
 	
 	public void LogStepFail(String StepDes) {		
 		logger.log(Status.FAIL, StepDes);
+		
 	}
 	
 	public void LogStepInfo(String StepDes) {		
