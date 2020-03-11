@@ -2,7 +2,7 @@ package modules;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Reporter;
+
 
 import pageobjects.AlcoholIntakePage;
 import pageobjects.BaseClass;
@@ -203,7 +203,7 @@ public class AlcoholIntakeAction {
 			else if (options_days_list[i].equalsIgnoreCase("7"))
 				AlcoholIntakeAction.clicSunday();
 			else
-				Reporter.log("Please choose atleast one option" + getClass());
+
 			jse.executeScript("window.scrollBy(0,250)", "");
 			Thread.sleep(1000);
 			

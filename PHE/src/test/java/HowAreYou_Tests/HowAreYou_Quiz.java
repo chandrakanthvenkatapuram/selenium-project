@@ -25,6 +25,8 @@ public class HowAreYou_Quiz {
 	        System.out.println("Name-"+TestData.get("Name"));
 	        Reporter.reportCreator(TestData.get("TestCase")+"_"+TestData.get("TestCode")+"_"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
 	        
+	        try {
+	        	
 	        //Start test
 	        AppKeys.Open_HowAreQuiz_website();
             
@@ -54,19 +56,34 @@ public class HowAreYou_Quiz {
 	        
 	        AppKeys.Choose_my_favorite_snacks_from_given_options(TestData);
 	        
+	        AppKeys.ValidateParttwoOutPutMessage(TestData);
+	        
 	        AppKeys.Select_frequency_of_alcohol_intake_and_click_Next(TestData);
+	        
+	        AppKeys.ValidatePartThreeOutPutMessage(TestData);
 	        
 	        AppKeys.Choose_my_exercise_days_and_strength(TestData);
 	        
 	        AppKeys.Choose_my_strengthening_metrics(TestData);
 	        
+	        AppKeys.ValidatePartFourOutPutMessage(TestData);
+	        
 	        AppKeys.About_my_smoking_habbits(TestData);
+	        
+	        AppKeys.ValidateSmokingOutPutMessage(TestData);
 	        
 	        AppKeys.Do_not_opt_for_sign_up();
 	        
 	        AppKeys.Land_on_Result_Page_with_the_score(TestData);
 	        
-	        AppKeys.Validate_messages_against_each_section();
+	        AppKeys.Validate_messages_against_each_section(TestData);
+	        
+	        AppKeys.CloseApplication();
+	        }
+	        catch(Exception e) {
+	        	Reporter.LogStepFail("Exception:- "+e.getMessage());
+	        	AppKeys.CloseApplication();
+	        }
 	      }
 	     
 	     Reporter.ReportEnd();

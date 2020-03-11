@@ -12,11 +12,7 @@ public class ExerciseAction {
 		//ExercisePage.mondayExercise.sendKeys(Keys.SHIFT
 		Actions move = new Actions(BaseClass.driver);//
 		Action action = (Action) move.dragAndDropBy(ExercisePage.mondayExercise, stregth_list, 0).build();
-		 action.perform();
-		 
-		
-		    
-		
+		 action.perform();		
 	}
 	
 	public static void dragTuesday(int d) {
@@ -25,7 +21,7 @@ public class ExerciseAction {
 		action.perform();
 		
 		int width = ExercisePage.tuesdayExercise.getSize().getWidth();
-System.out.println(width);
+		System.out.println(width);
 	    /*Actions act = new Actions(BaseClass.driver);
 	    act.moveToElement(ExercisePage.tuesdayExercise).moveByOffset((width/2)-2, 0).click().perform();
 	*/}
