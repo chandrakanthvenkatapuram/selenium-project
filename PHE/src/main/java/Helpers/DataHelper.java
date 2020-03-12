@@ -43,9 +43,9 @@ public class DataHelper {
 
 		for (int rCnt = 1; rCnt < rowCount; rCnt++) {			
 			String sTC = getCellData("TestData", rCnt, 1);
-			System.out.println("testcase - " + sTC);
+			//System.out.println("testcase - " + sTC);
 			String sExecution = getCellData("TestData", rCnt, 0);
-			System.out.println("testexecution - " + sExecution);
+			//System.out.println("testexecution - " + sExecution);
 			if(sExecution.trim().toUpperCase().equals("Y")) {
 				TCiDs.add(sTC);
 			}
