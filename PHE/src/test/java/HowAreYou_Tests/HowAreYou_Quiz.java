@@ -20,7 +20,7 @@ public class HowAreYou_Quiz {
         Reporter.reportInitiate();
 		DataLoader.LoadData();		
 	     for(String sTC:DataLoader.TCiDs) {
-	         System.out.println("Executing for TC "+sTC);
+	         System.out.println("Executing for TC "+sTC+ "=================================================================================================================");
 	         HashMap<String, String> TestData =  DataLoader.loadTestCaseData(sTC);
 	        System.out.println("Name-"+TestData.get("Name"));
 	        Reporter.reportCreator(TestData.get("TestCase")+"_"+TestData.get("TestCode")+"_"+TestData.get("Name")+"_"+TestData.get("Age")+"_"+TestData.get("Gender"));
