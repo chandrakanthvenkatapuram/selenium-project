@@ -556,7 +556,7 @@ public class MainMethods extends BaseClass {
 	    System.out.println("App message : --" +sAppMessages);
 	    System.out.println("Excel message : --" +TData.get("Part2_Message"));
 	    if(sAppMessages.trim()!="") {
-	    	Reporter.LogStepPass("Second step Message validation - pass");
+	    	Reporter.LogStepPass("Second step Message validation - PASS");
 	    	Reporter.LogStepInfo("Message - "+sAppMessages);
 	    }else {
 	    	Reporter.LogStepFail("Second step Message validation fail--"+sAppMessages+"--is not equal to--"+TData.get("Part2_Message").trim());
@@ -639,7 +639,7 @@ public class MainMethods extends BaseClass {
 //	    if(TData.get("Part3_Message").trim().contains(sAppMessages.trim())) {
 //	    	Reporter.LogStepPass("Third step Message validation - pass");
 	    if(sAppMessages.trim()!="") {
-	    	Reporter.LogStepPass("First step Message validation - pass");
+	    	Reporter.LogStepPass("Third step Message validation - PASS");
 	    	Reporter.LogStepInfo("Message - "+sAppMessages);
 	    }else {
 	    	Reporter.LogStepFail("Third step Message validation fail--"+sAppMessages+"--is not equal to--"+TData.get("Part3_Message").trim());
@@ -779,7 +779,7 @@ public class MainMethods extends BaseClass {
 //	    if(TData.get("Part4_Message").trim().contains(sAppMessages.trim())){
 //	    	Reporter.LogStepPass("Fourth step Message validation - pass");
 	    if(sAppMessages.trim()!="") {
-	    	Reporter.LogStepPass("First step Message validation - pass");
+	    	Reporter.LogStepPass("Fourth step Message validation - PASS");
 	    	Reporter.LogStepInfo("Message - "+sAppMessages);
 	    }else {
 	    	Reporter.LogStepFail("Fourth step Message validation fail--"+sAppMessages+"--is not equal to--"+TData.get("Part4_Message").trim());
@@ -830,7 +830,7 @@ public class MainMethods extends BaseClass {
 //	    if(TData.get("AfterSmoke_Message").trim().contains(sAppMessages.trim())) {
 //	    	Reporter.LogStepPass("AfterSmoke_Message validation - pass");
 	    if(sAppMessages.trim()!="") {
-	    	Reporter.LogStepPass("First step Message validation - pass");
+	    	Reporter.LogStepPass("After Smoking step Message validation - PASS");
 	    	Reporter.LogStepInfo("Message - "+sAppMessages);
 	    }else {
 	    	Reporter.LogStepFail("AfterSmoke_Message validation fail--"+sAppMessages+"--is not equal to--"+TData.get("AfterSmoke_Message").trim());
