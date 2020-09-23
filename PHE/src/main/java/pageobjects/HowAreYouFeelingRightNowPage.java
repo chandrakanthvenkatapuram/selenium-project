@@ -8,13 +8,18 @@ import org.openqa.selenium.support.How;
 
 public class HowAreYouFeelingRightNowPage extends BaseClass {
 
-	String LreallyKnackered = "//form/div[1]/div/div[1]/div/div/div[4]";
-	String canRunForMiles = "//form/div[1]/div/div[2]/div/div/div[4]";
-	String feelingCalm = "//form/div[1]/div/div[3]/div/div/div[4]";
-	String sleeplessNights = "//form/div[1]/div/div[4]/div/div/div[4]";
-	String leanMean = "//form/div[1]/div/div[5]/div/div/div[4]";
-	String downDumps = "//form/div[1]/div/div[6]/div/div/div[4]";
-
+	//String LreallyKnackered = "//form/div[1]/div/div[1]/div/div/div[4]";
+	//String canRunForMiles = "//form/div[1]/div/div[2]/div/div/div[4]";
+	//String feelingCalm = "//form/div[1]/div/div[3]/div/div/div[4]";
+	//String sleeplessNights = "//form/div[1]/div/div[4]/div/div/div[4]";
+	//String leanMean = "//form/div[1]/div/div[5]/div/div/div[4]";
+	//String downDumps = "//form/div[1]/div/div[6]/div/div/div[4]";
+	String LreallyKnackered = "//form//div//div[1]//div[1]//div[1]//div[4]";
+	String canRunForMiles = "//form//div//div//div[2]//div[1]//div[1]//div[4]";
+	String feelingCalm = "//form//div[3]//div[1]//div[1]//div[4]";
+	String sleeplessNights = "//form//div[4]//div[1]//div[1]//div[4]";
+	String leanMean = "//form//div[5]//div[1]//div[1]//div[4]";
+	String downDumps = "//form//div[6]//div[1]//div[1]//div[4]";
 	 
 	public void dragReallyKnackered(int d)
 	{

@@ -78,14 +78,14 @@ public class MainMethods extends BaseClass {
 			//String browser = "chrome";
 			//Added new line
 			if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", "C:\\Softwares\\Drivers\\chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\cvenkatapuram\\Documents\\Selenium\\Resources\\chromedriver_win32\\chromedriver.exe");
 				BaseClass.driver = new ChromeDriver();
 				// driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 				BaseClass.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			}		
 			BaseClass.driver.get(rp.ReadFile("url", "config.properties"));
-			OneYouLand.AcceptCookies();	
+			//OneYouLand.AcceptCookies();	
 	      
 	}
 	
@@ -122,7 +122,7 @@ public class MainMethods extends BaseClass {
 		hfrnw.dragLeanMean(Integer.parseInt(TData.get("LeanMean")));
 		hfrnw.dragDownDumps(Integer.parseInt(TData.get("DownDump")));
 		OneYouLand.clickNext();
-		Thread.sleep(2000);
+		Thread.sleep(10000);
 		Reporter.LogStepInfo("Health Info : "+ "\n" + "ReallyKnackered : " + TData.get("ReallyKnackered") + "\n" + "CanRunForMiles :\n " + TData.get("CanRunForMiles") +" FeelingCalm :\n " + TData.get("FeelingCalm") +"SleeplessNights :\n " + TData.get("SleeplessNights") +" LeanMean :\n " + TData.get("LeanMean") +"DownDump : \n " + TData.get("DownDump"));
 	}
 	
@@ -241,7 +241,7 @@ public class MainMethods extends BaseClass {
 				}
 			  
 		 }
-			Reporter.LogStepInfo("Dependents : "+ReportingInfoDep);
+			Reporter.LogStepInfo("Dependants  "+ReportingInfoDep);
 			OneYouLand.clickNext();
 			
 	}
@@ -309,7 +309,7 @@ public class MainMethods extends BaseClass {
 		//TakeCareAction.clickNext(); Thread.sleep(1000);
 		jse.executeScript("window.scrollBy(0,250)", "");
 		Thread.sleep(1000);
-		Reporter.LogStepInfo("Health Priorities :"+ReportingInfoPrio);
+		Reporter.LogStepInfo("Health Priorities "+ReportingInfoPrio);
 		OneYouLand.clickNext();
 		//Reporter.LogStepPass("Pass!! Health Priorities");
 		//HealthPrioritiesAction.clickNextPage();		
@@ -349,16 +349,16 @@ public class MainMethods extends BaseClass {
 		for (int i = 0; i < len; i++) {
 			if (split_options[i].equalsIgnoreCase("1")) {
 				DrinkChoiceAction.selectSugarDrinks();
-				Reporter.LogStepInfo("Eating Habbit Drinks: Sugary drinks");
+				Reporter.LogStepInfo("Eating Habit Drinks: Sugary drinks");
 			}else if (split_options[i].equalsIgnoreCase("2")) {
 				DrinkChoiceAction.selectDietDrinks();
-				Reporter.LogStepInfo("Eating Habbit Drinks: Diet drinks");
+				Reporter.LogStepInfo("Eating Habit Drinks: Diet drinks");
 			}else if (split_options[i].equalsIgnoreCase("3")) {
 				DrinkChoiceAction.selectWater();
-				Reporter.LogStepInfo("Eating Habbit Drinks: Water");
+				Reporter.LogStepInfo("Eating Habit Drinks: Water");
 			}else if (split_options[i].equalsIgnoreCase("4")) {
 				DrinkChoiceAction.selectTea();
-				Reporter.LogStepInfo("Eating Habbit Drinks: Unsugared tea/coffee");
+				Reporter.LogStepInfo("Eating Habit Drinks: Unsugared tea/coffee");
 			}
 		}
 		JavascriptExecutor jse=(JavascriptExecutor)BaseClass.driver; 
@@ -381,16 +381,16 @@ public class MainMethods extends BaseClass {
 		for (int i = 0; i < len; i++) {
 			if (split_options[i].equalsIgnoreCase("1")) {
 				FoodChoiceAction.clickChips();
-				Reporter.LogStepInfo("Eating Habbit Snaks: Chips");
+				Reporter.LogStepInfo("Eating Habit Snacks: Chips");
 			}else if (split_options[i].equalsIgnoreCase("2")) {
 				FoodChoiceAction.clickBPotato();
-				Reporter.LogStepInfo("Eating Habbit Snaks: Boiled potatoes");
+				Reporter.LogStepInfo("Eating Habit Snacks: Boiled potatoes");
 			}else if (split_options[i].equalsIgnoreCase("3")) {
 				FoodChoiceAction.clickRPotato();
-				Reporter.LogStepInfo("Eating Habbit Snaks: Roast potatoes");
+				Reporter.LogStepInfo("Eating Habit Snacks: Roast potatoes");
 			}else if (split_options[i].equalsIgnoreCase("4")) {
 				FoodChoiceAction.clickJPotato();
-				Reporter.LogStepInfo("Eating Habbit Snaks: Jacket potatoes");
+				Reporter.LogStepInfo("Eating Habit Snacks: Jacket potatoes");
 			}
 		}
 		OneYouLand.clickNext();
@@ -404,16 +404,16 @@ public class MainMethods extends BaseClass {
 	    String Bfstoptions = TData.get("options_bfast");
 	    if (Bfstoptions.equalsIgnoreCase("1")) {
 	    	BreakfastChoiceAction.clickSugaryCereal();
-			Reporter.LogStepInfo("Eating Habbit breakfast: Sugary cereal");
+			Reporter.LogStepInfo("Eating Habit breakfast: Sugary cereal");
 	    }else if (Bfstoptions.equalsIgnoreCase("2")) {
 	    	BreakfastChoiceAction.clickPorridge();
-			Reporter.LogStepInfo("Eating Habbit breakfast: Plain porridge");
+			Reporter.LogStepInfo("Eating Habit breakfast: Plain porridge");
 	    }else if (Bfstoptions.equalsIgnoreCase("3")) {
 	    	BreakfastChoiceAction.clickCornFlakes();
-			Reporter.LogStepInfo("Eating Habbit breakfast: Plain cereal e.g. Cornflakes");
+			Reporter.LogStepInfo("Eating Habit breakfast: Plain cereal e.g. Cornflakes");
 	    }else if (Bfstoptions.equalsIgnoreCase("4")) {
 	    	BreakfastChoiceAction.clickCereals();
-			Reporter.LogStepInfo("Eating Habbit breakfast: Wholegrain cereal");
+			Reporter.LogStepInfo("Eating Habit breakfast: Wholegrain cereal");
 	    }	 
 	    //BreakfastChoiceAction.clickNextBC();
 	    OneYouLand.clickNext();
@@ -430,16 +430,16 @@ public class MainMethods extends BaseClass {
 
 		if (cheeseoptions.equalsIgnoreCase("1")) {
 			CheeseChoiceAction.clickHardCheese();
-			Reporter.LogStepInfo("Eating Habbit cheese: Hard cheese");
+			Reporter.LogStepInfo("Eating Habit cheese: Hard cheese");
 		}else if (cheeseoptions.equalsIgnoreCase("2")) {
 			CheeseChoiceAction.clickCottageCheese();
-			Reporter.LogStepInfo("Eating Habbit cheese: Cottage cheese");
+			Reporter.LogStepInfo("Eating Habit cheese: Cottage cheese");
 		}else if (cheeseoptions.equalsIgnoreCase("3")) {
 			CheeseChoiceAction.clickFatCheese();
-			Reporter.LogStepInfo("Eating Habbit cheese: Lower fat hard cheese");
+			Reporter.LogStepInfo("Eating Habit cheese: Lower fat hard cheese");
 		}else if (cheeseoptions.equalsIgnoreCase("4")) {
 			CheeseChoiceAction.clickVeganCheese();
-			Reporter.LogStepInfo("Eating Habbit cheese: Low fat vegan cheese");
+			Reporter.LogStepInfo("Eating Habit cheese: Low fat vegan cheese");
 		}
 		//CheeseChoiceAction.clickNextCC();
 		OneYouLand.clickNext();
@@ -453,16 +453,16 @@ public class MainMethods extends BaseClass {
 		String options_nv = TData.get("options_nv");
 		if (options_nv.equalsIgnoreCase("1")) {
 			NonVegChoicesAction.clickBurger();
-			Reporter.LogStepInfo("Eating Habbit Non-Veg: Burger");
+			Reporter.LogStepInfo("Eating Habit Non-Veg: Burger");
 		}else if (options_nv.equalsIgnoreCase("2")) {
 			NonVegChoicesAction.clickFish();
-			Reporter.LogStepInfo("Eating Habbit Non-Veg: Fish");
+			Reporter.LogStepInfo("Eating Habit Non-Veg: Fish");
 		}else if (options_nv.equalsIgnoreCase("3")) {
 			NonVegChoicesAction.clickHam();
-			Reporter.LogStepInfo("Eating Habbit Non-Veg: Ham");
+			Reporter.LogStepInfo("Eating Habit Non-Veg: Ham");
 		}else if (options_nv.equalsIgnoreCase("4")) {
 			NonVegChoicesAction.clickMeat();
-			Reporter.LogStepInfo("Eating Habbit Non-Veg: Lean meat or meat substitute");
+			Reporter.LogStepInfo("Eating Habit Non-Veg: Lean meat or meat substitute");
 		}
 
 		//NonVegChoicesAction.clickNextNC();
@@ -478,16 +478,16 @@ public class MainMethods extends BaseClass {
 		String fruits_options = TData.get("options_fruits");
 		if (fruits_options.equalsIgnoreCase("1")) {
 			FruitChoiceActions.clickZero();
-			Reporter.LogStepInfo("Eating Habbit No of servings: ZERO");
+			Reporter.LogStepInfo("Eating Habit No of servings: ZERO");
 		}else if (fruits_options.equalsIgnoreCase("2")) {
 			FruitChoiceActions.clickOne();
-			Reporter.LogStepInfo("Eating Habbit No of servings: 1-2");
+			Reporter.LogStepInfo("Eating Habit No of servings: 1-2");
 		}else if (fruits_options.equalsIgnoreCase("3")) {
 			FruitChoiceActions.clickThree();
-			Reporter.LogStepInfo("Eating Habbit No of servings: 3-4");
+			Reporter.LogStepInfo("Eating Habit No of servings: 3-4");
 		}else if (fruits_options.equalsIgnoreCase("4")) {
 			FruitChoiceActions.clickFive();
-			Reporter.LogStepInfo("Eating Habbit No of servings: 5+");
+			Reporter.LogStepInfo("Eating Habit No of servings: 5+");
 		}
 		//FruitChoiceActions.clickNextFrC();
 		OneYouLand.clickNext();
@@ -540,7 +540,7 @@ public class MainMethods extends BaseClass {
 	    }
 	    JavascriptExecutor jse=(JavascriptExecutor)BaseClass.driver; 
 	    jse.executeScript("window.scrollBy(0,250)", ""); Thread.sleep(1000);
-	    Reporter.LogStepInfo("Daily Snaks   "+ReportingInfoSnak);
+	    Reporter.LogStepInfo("Daily Snacks   "+ReportingInfoSnak);
 	    OneYouLand.clickNext();
 	    Thread.sleep(1000);
 
@@ -811,7 +811,7 @@ public class MainMethods extends BaseClass {
 	    OneYouLand.clickNext();
 		Thread.sleep(1000);
 
-		System.out.println("smoking habbits done");
+		System.out.println("smoking habits done");
 
 	}
 	

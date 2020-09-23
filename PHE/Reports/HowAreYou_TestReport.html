@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Mar 16, 2020 07:17:02 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Aug 14, 2020 02:49:36 PM</span>
 				</a>
 			</li>
 			<li>
@@ -72,6 +72,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +123,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -137,10 +138,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='31.25%'><span class='strong'>30</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='68.75%'>66</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='20%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='80%'>4</span> others
 				</div>
 			</div>
 		</div>
@@ -155,17 +156,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>TC1_EG-DG-EG-SG_Mark_18_M</span>
-						<span class='test-time'>Mar 16, 2020 07:17:03 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Aug 14, 2020 02:49:38 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Mar 16, 2020 07:17:03 PM</span>
-	<span class='label end-time'>Mar 16, 2020 07:17:58 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+875ms</span>
+	<span class='label start-time'>Aug 14, 2020 02:49:38 PM</span>
+	<span class='label end-time'>Aug 14, 2020 02:51:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 12s+53ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -179,12 +180,12 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:20 PM</td>
+					<td class='timestamp'>2:50:24 PM</td>
 					<td class='step-details'>Quiz Started for : Mark</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:22 PM</td>
+					<td class='timestamp'>2:50:34 PM</td>
 					<td class='step-details'>Health Info : 
 ReallyKnackered : 68
 CanRunForMiles :
@@ -196,544 +197,23 @@ CanRunForMiles :
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:22 PM</td>
+					<td class='timestamp'>2:51:28 PM</td>
 					<td class='step-details'>Taking Care Option : I don't have the time</td>
 				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:22 PM</td>
-					<td class='step-details'>Dependents :  :My kids</td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>2:51:50 PM</td>
+					<td class='step-details'>Exception:- element click intercepted: Element <span class="hay-option__icon icon-about-you-my-kids" aria-hidden="true"></span> is not clickable at point (527, 471). Other element would receive the click: <input id="option-11" type="checkbox" name="11" class="visually-hidden" value="my kids">
+  (Session info: chrome=84.0.4147.125)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PRO-LAP-241', ip: '192.168.0.91', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.125, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\CVENKA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:63190}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c917a2a44959a3de1fe176a043d7c61b</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:25 PM</td>
-					<td class='step-details'>Health Priorities :: Avoiding aches and pains: Feeling young: Staying independent</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:26 PM</td>
-					<td class='step-details'>First step Message validation - pass</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:26 PM</td>
-					<td class='step-details'>Message -  Sounds like you're not feeling either positive or negative as far as your wellbeing's concerned Mark, so maybe you could do with a bit of a shake up?</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:27 PM</td>
-					<td class='step-details'>Eating Habbit Drinks: Water</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:28 PM</td>
-					<td class='step-details'>Eating Habbit Snaks: Boiled potatoes</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:29 PM</td>
-					<td class='step-details'>Eating Habbit breakfast: Wholegrain cereal</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:30 PM</td>
-					<td class='step-details'>Eating Habbit cheese: Cottage cheese</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:32 PM</td>
-					<td class='step-details'>Eating Habbit Non-Veg: Fish</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:33 PM</td>
-					<td class='step-details'>Eating Habbit No of servings: 5+</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:36 PM</td>
-					<td class='step-details'>Daily Snaks   : Fruit</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:37 PM</td>
-					<td class='step-details'>Second step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:37 PM</td>
-					<td class='step-details'>Message -  When it comes to food Mark, you certainly know your onions! Your answers suggest you're likely to be following a healthy, balanced diet. Keep it up and you'll really feel the benefits.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:39 PM</td>
-					<td class='step-details'>Drink : Monthly or less</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:40 PM</td>
-					<td class='step-details'>Third step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:40 PM</td>
-					<td class='step-details'>Message -  It looks like you're drinking within the limits that put you at the lowest risk from alcohol Mark. That's important for your health, so it's great to hear you're not overdoing it.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:45 PM</td>
-					<td class='step-details'>Every Day exercise : Monday-400: Wednesday-400: Sunday-400</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:48 PM</td>
-					<td class='step-details'>Every Day exercise : Tuesday-400: Thursday-400: Friday-400</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:49 PM</td>
-					<td class='step-details'>Fourth step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:49 PM</td>
-					<td class='step-details'>Message -  That's great Mark! It looks like you are pretty active, which is really important to keep you healthy. You should be proud of yourself - keep it up! Remember, even if you find it difficult to move around, doing some activity is better for you than doing none, so focus on what you can manage and aim to build up gradually.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:51 PM</td>
-					<td class='step-details'>Smoke : You have quit</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:52 PM</td>
-					<td class='step-details'>After Smoking step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:52 PM</td>
-					<td class='step-details'>Message - Well done! Quitting smoking can be really hard, so it goes to show that you can do anything if you put your mind to it Mark. Channel that willpower to make other healthy changes in your life.</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:56 PM</td>
-					<td class='step-details'>Score Matched :10</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:57 PM</td>
-					<td class='step-details'>Content validation of Moving section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:58 PM</td>
-					<td class='step-details'>Content validation of Eating section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:58 PM</td>
-					<td class='step-details'>Content validation of Drinking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:17:58 PM</td>
-					<td class='step-details'>Content validation of Smoking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:17:58 PM</td>
-					<td class='step-details'>Closing the application</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>TC2_EG-DA-ER-SG_Amy_49_F</span>
-						<span class='test-time'>Mar 16, 2020 07:17:59 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Mar 16, 2020 07:17:59 PM</span>
-	<span class='label end-time'>Mar 16, 2020 07:18:54 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+893ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:14 PM</td>
-					<td class='step-details'>Quiz Started for : Amy</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:16 PM</td>
-					<td class='step-details'>Health Info : 
-ReallyKnackered : 50
-CanRunForMiles :
- 50 FeelingCalm :
- 50SleeplessNights :
- 50 LeanMean :
- 50DownDump : 
- 50</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:16 PM</td>
-					<td class='step-details'>Taking Care Option : I'm ill or disabled</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:16 PM</td>
-					<td class='step-details'>Dependents :  :My pets</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:19 PM</td>
-					<td class='step-details'>Health Priorities :: Fitting into my jeans: Having more energy: Avoiding aches and pains</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:20 PM</td>
-					<td class='step-details'>First step Message validation - pass</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:20 PM</td>
-					<td class='step-details'>Message -  Sounds like your wellbeing's a bit of a mixed bag at the moment Amy, and you could do with a shake up in some areas.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:20 PM</td>
-					<td class='step-details'>Eating Habbit Drinks: Diet drinks</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:21 PM</td>
-					<td class='step-details'>Eating Habbit Snaks: Boiled potatoes</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:23 PM</td>
-					<td class='step-details'>Eating Habbit breakfast: Wholegrain cereal</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:24 PM</td>
-					<td class='step-details'>Eating Habbit cheese: Cottage cheese</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:25 PM</td>
-					<td class='step-details'>Eating Habbit Non-Veg: Fish</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:26 PM</td>
-					<td class='step-details'>Eating Habbit No of servings: 1-2</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:29 PM</td>
-					<td class='step-details'>Daily Snaks   : Unsalted nuts</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:31 PM</td>
-					<td class='step-details'>Second step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:31 PM</td>
-					<td class='step-details'>Message -  You're not feeling as slim as you'd like Amy and that might be because you're choosing some unhealthy options. It's easy to slip into bad habits, so you should take a closer look at your diet and see what simple changes you can make. Avoiding foods that are high in fat and sugar and choosing high fibre, filling carbs is a good place to start.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:38 PM</td>
-					<td class='step-details'>Drink : Most Weeks</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:38 PM</td>
-					<td class='step-details'>Third step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:38 PM</td>
-					<td class='step-details'>Message -  It looks like you're drinking a lot more than is good for you Amy, and that might be dampening your mood. Cut down and you could be over the moon! Switching to smaller measures or lower alcohol versions of your favourite drinks is a good trick - and try to take 2 to 3 days off drink each week. In some cases it can be dangerous to stop drinking too quickly. If you have withdrawal symptoms (like shaking, sweating or feeling anxious), you should take medical advice before stopping completely.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:42 PM</td>
-					<td class='step-details'>Every Day exercise : Monday-200: Wednesday-200</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:45 PM</td>
-					<td class='step-details'>Every Day exercise : Monday-200: Wednesday-200</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:45 PM</td>
-					<td class='step-details'>Fourth step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:45 PM</td>
-					<td class='step-details'>Message -  Doing a bit more exercise than you do now should help to you relax and sleep soundly - but avoid anything too vigorous just before bed. Remember, even if you find it difficult to move around, doing some activity is better for you than doing none, so focus on what you can manage and aim to build up gradually.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:47 PM</td>
-					<td class='step-details'>Smoke : Never</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:49 PM</td>
-					<td class='step-details'>After Smoking step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:49 PM</td>
-					<td class='step-details'>Message - Not smoking is one of the best choices you've ever made Amy, and it gives you a big head start on your journey towards healthy living. Good for you!</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:53 PM</td>
-					<td class='step-details'>Score Matched :5</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:53 PM</td>
-					<td class='step-details'>Content validation of Moving section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:54 PM</td>
-					<td class='step-details'>Content validation of Eating section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:54 PM</td>
-					<td class='step-details'>Content validation of Drinking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:18:54 PM</td>
-					<td class='step-details'>Content validation of Smoking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:18:54 PM</td>
-					<td class='step-details'>Closing the application</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
-					<div class='test-heading'>
-						<span class='test-name'>TC3_EA-DA-ER-SG_Jack_80_M</span>
-						<span class='test-time'>Mar 16, 2020 07:18:56 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Mar 16, 2020 07:18:56 PM</span>
-	<span class='label end-time'>Mar 16, 2020 07:19:49 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 53s+343ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:10 PM</td>
-					<td class='step-details'>Quiz Started for : Jack</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:12 PM</td>
-					<td class='step-details'>Health Info : 
-ReallyKnackered : 86
-CanRunForMiles :
- 21 FeelingCalm :
- 26SleeplessNights :
- 27 LeanMean :
- 66DownDump : 
- 18</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:12 PM</td>
-					<td class='step-details'>Taking Care Option : I don't know what to do</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:13 PM</td>
-					<td class='step-details'>Dependents :  :My brothers and sisters</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:15 PM</td>
-					<td class='step-details'>Health Priorities :: Staying independent: Staying young looking: Being there for my kids and grandkids</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:17 PM</td>
-					<td class='step-details'>First step Message validation - pass</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:17 PM</td>
-					<td class='step-details'>Message -  Sounds like you're not feeling either positive or negative as far as your wellbeing's concerned Jack, so maybe you could do with a bit of a shake up?</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:17 PM</td>
-					<td class='step-details'>Eating Habbit Drinks: Sugary drinks</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:18 PM</td>
-					<td class='step-details'>Eating Habbit Snaks: Roast potatoes</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:19 PM</td>
-					<td class='step-details'>Eating Habbit breakfast: Wholegrain cereal</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:20 PM</td>
-					<td class='step-details'>Eating Habbit cheese: Cottage cheese</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:22 PM</td>
-					<td class='step-details'>Eating Habbit Non-Veg: Fish</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:23 PM</td>
-					<td class='step-details'>Eating Habbit No of servings: 3-4</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:26 PM</td>
-					<td class='step-details'>Daily Snaks   : Fruit: Toast with low fat spread</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:27 PM</td>
-					<td class='step-details'>Second step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:27 PM</td>
-					<td class='step-details'>Message -  Your food choices aren't terrible, but they're not exactly great either Jack. Eating a healthy, balanced diet is the best way to keep your energy levels up. Choosing more high fibre, starchy foods that release their energy slowly should give you more staying power too!</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:32 PM</td>
-					<td class='step-details'>Drink : Most Weeks</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:33 PM</td>
-					<td class='step-details'>Third step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:33 PM</td>
-					<td class='step-details'>Message -  You may not drink all that much most of the time Jack, but even then it's not a good idea to have a few glasses on one or two days. Even a couple of drinks can affect your quality of sleep - you might drop off quicker, but you probably won't sleep as deeply and you'll wake up more often in the night. Spread your drinks out a bit over at least 3 days and you could be sleeping like a baby!</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:37 PM</td>
-					<td class='step-details'>Every Day exercise : Monday-200: Wednesday-200</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:39 PM</td>
-					<td class='step-details'>Every Day exercise : Monday-200: Wednesday-200</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:40 PM</td>
-					<td class='step-details'>Fourth step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:40 PM</td>
-					<td class='step-details'>Message -  Doing a bit more exercise than you do now should help to you relax and sleep soundly - but avoid anything too vigorous just before bed. Remember, even if you find it difficult to move around, doing some activity is better for you than doing none, so focus on what you can manage and aim to build up gradually.</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:42 PM</td>
-					<td class='step-details'>Smoke : Never</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:43 PM</td>
-					<td class='step-details'>After Smoking step Message validation - PASS</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:43 PM</td>
-					<td class='step-details'>Message - Not smoking is one of the best choices you've ever made Jack, and it gives you a big head start on your journey towards healthy living. Good for you!</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:47 PM</td>
-					<td class='step-details'>Score Matched :6</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:48 PM</td>
-					<td class='step-details'>Content validation of Moving section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:49 PM</td>
-					<td class='step-details'>Content validation of Eating section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:49 PM</td>
-					<td class='step-details'>Content validation of Drinking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:19:49 PM</td>
-					<td class='step-details'>Content validation of Smoking section on result page is passed</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:19:49 PM</td>
+					<td class='timestamp'>2:51:50 PM</td>
 					<td class='step-details'>Closing the application</td>
 				</tr>
 			</tbody>
@@ -776,31 +256,31 @@ CanRunForMiles :
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>96</div>
+					<div class='panel-lead'>5</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Mar 16, 2020 07:17:02 PM</div>
+					<div class='panel-lead'>Aug 14, 2020 02:49:36 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Mar 16, 2020 07:19:50 PM</div>
+			 		<div class='panel-lead'>Aug 14, 2020 02:51:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 2m 48s+689ms</div>
+					<div class='panel-lead'>0h 2m 15s+198ms</div>
 				</div>
 			</div>
 		</div>
@@ -813,22 +293,22 @@ CanRunForMiles :
 
 		<script>
 			var statusGroup = {
-				passParent: 3,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 30,
-				failChild: 0,
+				passChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 66,
-				exceptionsChild: 0,
+				infoChild: 4,
+				exceptionsChild: 1,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

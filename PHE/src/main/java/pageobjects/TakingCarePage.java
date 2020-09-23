@@ -8,8 +8,7 @@ public class TakingCarePage {
 	
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-do-not-have-time']"))
 	public static WebElement iDontHaveTime;
-	
-
+		
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-important-i-lookafter-others']"))
 	public static WebElement iLookAfterOthers;
 
@@ -28,7 +27,8 @@ public class TakingCarePage {
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-i-take-good-care-of-myself']"))
 	public static WebElement iTakeGoodCare;
 	
-	@FindBy(how=How.XPATH,using=("//form/div[2]/button"))
+	//@FindBy(how=How.XPATH,using=("//form/div[2]/button"))
+	@FindBy(how=How.XPATH,using=("//*[@class='hay-btn hay-btn--no-touch']"))
 	public static WebElement next3;
 	
 
