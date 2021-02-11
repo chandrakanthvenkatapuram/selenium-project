@@ -54,13 +54,17 @@ public class AlcoholIntakePage {
 	
 	//########################################//
 	
-	@FindBy(how=How.XPATH,using="//*[@id='input-23']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-23']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-23']/following-sibling::button[2]")
 	public static WebElement beer4VolWD;
-	@FindBy(how=How.XPATH,using="//*[@id='input-24']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-24']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-24']/following-sibling::button[2]")
 	public static WebElement beer5VolWD;
-	@FindBy(how=How.XPATH,using="//*[@id='input-25']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-25']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-25']/following-sibling::button[2]")
 	public static WebElement spiritsVolWD;
-	@FindBy(how=How.XPATH,using="//*[@id='input-26']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-26']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-26']/following-sibling::button[2]")
 	public static WebElement wineVolWD;
 	
 	
@@ -77,13 +81,17 @@ public class AlcoholIntakePage {
 
 *///########################################//
 
-	@FindBy(how=How.XPATH,using="//*[@id='input-38']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-38']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-38']/following-sibling::button[2]")
 	public static WebElement beer4VolWE;
-	@FindBy(how=How.XPATH,using="//*[@id='input-39']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-39']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-39']/following-sibling::button[2]")
 	public static WebElement beer5VolWE;
-	@FindBy(how=How.XPATH,using="//*[@id='input-40']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-40']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-40']/following-sibling::button[2]")
 	public static WebElement spiritsVolWE;
-	@FindBy(how=How.XPATH,using="//*[@id='input-41']")
+	//@FindBy(how=How.XPATH,using="//*[@id='input-41']")
+	@FindBy(how=How.XPATH,using="//label[@for='input-41']/following-sibling::button[2]")
 	public static WebElement wineVolWE;
 	
 	
@@ -91,13 +99,19 @@ public class AlcoholIntakePage {
 //########### WeekDays occasional volumes#####//
 	
 
-		@FindBy(how=How.XPATH,using="//*[@id='input-42']")
+		
+		
+	    @FindBy(how=How.XPATH,using="//label[@for='input-42']/following-sibling::button[2]")
+	    //@FindBy(how=How.XPATH,using="//body//div[@id='hay-container-embedded']//div//div//div//div//div[1]//input[1]")
 		public static WebElement beer4VolOcc;
-		@FindBy(how=How.XPATH,using="//*[@id='input-43']")
+		//@FindBy(how=How.XPATH,using="//*[@id='input-43']")
+		@FindBy(how=How.XPATH,using="//label[@for='input-43']/following-sibling::button[2]")
 		public static WebElement beer5VolOcc;
-		@FindBy(how=How.XPATH,using="//*[@id='input-44']")
+		//@FindBy(how=How.XPATH,using="//*[@id='input-44']")
+		@FindBy(how=How.XPATH,using="//label[@for='input-44']/following-sibling::button[2]")
 		public static WebElement spiritsVolOcc;
-		@FindBy(how=How.XPATH,using="//*[@id='input-45']")
+		//@FindBy(how=How.XPATH,using="//*[@id='input-45']")
+		@FindBy(how=How.XPATH,using="//label[@for='input-45']/following-sibling::button[2]")
 		public static WebElement wineVolOcc;
 
 //***********Additional Page***************

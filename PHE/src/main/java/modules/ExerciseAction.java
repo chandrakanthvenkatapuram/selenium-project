@@ -1,9 +1,12 @@
 package modules;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 import pageobjects.BaseClass;
+import pageobjects.DrinkChoice;
 import pageobjects.ExercisePage;
 
 public class ExerciseAction {
@@ -58,6 +61,9 @@ public class ExerciseAction {
 
 	public static void clickNext_Ex() {
 		ExercisePage.next_Ex.click();
+		//WebElement next_ex = ExercisePage.next_Ex;
+		//JavascriptExecutor executor = (JavascriptExecutor) BaseClass.driver;
+		//executor.executeScript("arguments[0].click();", next_ex);
 	}
 
 }

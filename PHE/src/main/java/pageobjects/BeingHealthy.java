@@ -5,11 +5,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class BeingHealthy {
+	
 	@FindBy(how=How.XPATH,using="//*[@class='hay-option__icon icon-about-you-my-partner']")
 	public static WebElement myPartner;
 	
 	@FindBy(how=How.XPATH,using="//*[@class='hay-option__icon icon-about-you-my-kids']")
 	public static WebElement myKids;
+	
 	
 	@FindBy(how=How.XPATH,using="//*[@class='hay-option__icon icon-about-you-my-parents']")
 	public static WebElement myParents;

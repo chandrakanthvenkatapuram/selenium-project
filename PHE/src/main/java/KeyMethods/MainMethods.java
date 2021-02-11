@@ -71,6 +71,7 @@ public class MainMethods extends BaseClass {
 	Report Reporter = new Report();
 	HowAreYouFeelingRightNowPage hfrnw = new HowAreYouFeelingRightNowPage();
 	
+	
 	public void Open_HowAreQuiz_website() throws Throwable {
 
 			PageFactory.initElements(driver, ReadPropertiesFile.class);
@@ -85,11 +86,35 @@ public class MainMethods extends BaseClass {
 				BaseClass.driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			}		
 			BaseClass.driver.get(rp.ReadFile("url", "config.properties"));
-			//OneYouLand.AcceptCookies();	
+			
+			boolean cookie;
+			
+			try
+			{
+				 cookie = driver.findElement(By.xpath("//button[@id='nhsuk-cookie-banner__link_accept_analytics']")).isDisplayed();
+				 if(cookie)
+					{
+					  OneYouLand.AcceptCookies();
+					}
+			}
+			catch(Exception e)
+			 {
+				 
+			 }		    
 	      
 	}
 	
 	
+	
+
+	private boolean isElementPresent(By xpath) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+
 	public void Fill_Name_Gender_Age_clickNext(HashMap<String, String> TData) throws Throwable {
 
 			PageFactory.initElements(driver, OneYouLandingPage.class);
@@ -579,13 +604,16 @@ public class MainMethods extends BaseClass {
 		if (options_freq.equalsIgnoreCase("1")) {
 			AlcoholIntakeAction.clickMostly();
 			DaysDrink(options_days);
-			WeeklyDrinkVol("1", "WeekDays", options_volume_WD);
 			JavascriptExecutor jse = (JavascriptExecutor)BaseClass.driver;
 			jse.executeScript("window.scrollBy(0,250)", "");
+			WeeklyDrinkVol("1", "WeekDays", options_volume_WD);
+			jse.executeScript("window.scrollBy(0,50)", "");
 			WeeklyDrinkVol("1", "WeekEnds", options_volume_WE);
 			//AlcoholIntakeAction.clickNext_AI();
-			Reporter.LogStepInfo("Drink : Most Weeks");
 			OneYouLand.clickNext();
+			//AlcoholIntakeAction.clickNever();
+			//Reporter.LogStepInfo("Drink : Most Weeks");
+			//OneYouLand.clickNext();
 			
 		}
 
@@ -594,8 +622,10 @@ public class MainMethods extends BaseClass {
 			OneYouLand.clickNext();
 			Thread.sleep(1000);
 			WeeklyDrinkVol("2", "WeekDays", options_volume_WD);
-			Reporter.LogStepInfo("Drink : 2-4 times in a month");
 			OneYouLand.clickNext();
+			//AlcoholIntakeAction.clickNever();
+			//Reporter.LogStepInfo("Drink : 2-4 times in a month");
+			//OneYouLand.clickNext();
 			Thread.sleep(1000);
 
 		} 
@@ -989,17 +1019,20 @@ public class MainMethods extends BaseClass {
 					}	
 				}else if (vol_list[0].equalsIgnoreCase("2")) {
 					if(!vol_list[1].equals("0")) {
-						AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						//AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						AlcoholIntakeAction.clickBeer5VolOcc(vol_list[1]);
 						NoDriking = "Yes";
 					}
 				}else if (vol_list[0].equalsIgnoreCase("3")) {
 					if(!vol_list[1].equals("0")) {
-						AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						//AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						AlcoholIntakeAction.clickSpiritVolOcc(vol_list[1]);
 						NoDriking = "Yes";
 					}
 				}else if (vol_list[0].equalsIgnoreCase("4")) {
 					if(!vol_list[1].equals("0")) {
-						AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						//AlcoholIntakeAction.clickBeer4VolOcc(vol_list[1]);
+						AlcoholIntakeAction.clickWineVolOcc(vol_list[1]);
 						NoDriking = "Yes";
 					}
 				}else {

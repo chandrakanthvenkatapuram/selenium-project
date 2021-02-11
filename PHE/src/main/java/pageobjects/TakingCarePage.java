@@ -6,6 +6,9 @@ import org.openqa.selenium.support.How;
 
 public class TakingCarePage {
 	
+	//@FindBy(how=How.XPATH,using=("//body//div[@id='hay-container-embedded']//div//div//div//div//div//div//div//div//div//div[1]//label[1]//span[1]"))
+	//public static WebElement iDontHaveTime;
+	
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-do-not-have-time']"))
 	public static WebElement iDontHaveTime;
 		
@@ -23,7 +26,7 @@ public class TakingCarePage {
 	
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-ill-disabled']"))
 	public static WebElement illDisabled;	
-	
+
 	@FindBy(how=How.XPATH,using=("//*[@class='hay-option__icon icon-about-you-i-take-good-care-of-myself']"))
 	public static WebElement iTakeGoodCare;
 	

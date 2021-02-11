@@ -10,6 +10,9 @@ public class OneYouLandingPage extends BaseClass {
 		super();
 	}
 	
+	@FindBy(how=How.XPATH, using="//button[@id='nhsuk-cookie-banner__link_accept_analytics']")
+	public static WebElement acceptCookie;
+	
 	@FindBy(how=How.XPATH, using="//*[@id='input1']")
 	public static WebElement firstName;
 	
